@@ -1,0 +1,469 @@
+
+/* ELEMENTS SECTION */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120%;
+  color: aliceblue;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+header {
+  background-color: #0c2e4f;
+  color: honeydew;
+  font-family: 'Trebuchet MS';
+}
+
+#headshot {
+  width: 80px;
+  border: 1px inset peru;
+}
+
+footer {
+  background-color: gainsboro;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* ID SECTION */
+#carousel-text {
+  color: white;
+}
+
+#education {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+#experience {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+#skills {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+#interests {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+#contact {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+#Headshot {
+  width: 170px;
+  height: 170px;
+  padding: 8px;
+  border: 10px inset peru;
+  border-radius: 50%;
+  margin: 10px;
+  object-fit: cover;
+}
+
+#header {
+  padding: 20px;
+  position: static;
+  display: flex;
+}
+
+#Profile {
+  font-size: 105%;
+  text-align: left;
+  padding-left: 80px;
+  width: auto;
+  color: pink;
+}
+
+#Name {
+  font-size: 150%;
+  color: aliceblue;
+}
+
+#HeaderText {
+  padding-top: 30px;
+  text-align: left;
+  width: 100%;
+  text-align: justify;
+}
+
+/*Grid Display CSS*/
+.Qualifications-Section {
+  grid-area: education;
+}
+.Experience-Section {
+  grid-area: experience;
+}
+.Skills-Section {
+  grid-area: skills;
+}
+.Interests-Section {
+  grid-area: interests;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    "education education"
+    "experience experience"
+    "skills interests";
+  grid-template-columns: 1fr 3fr;
+}
+
+/*Profile grid container*/
+.Profile {
+  grid-area: profile;
+}
+.DescriptionOfMe {
+  grid-area: DescriptionOfMe;
+}
+.Profile-grid {
+  display: grid;
+  grid-template-areas: 
+    "profile DescriptionOfMe _blank";
+  grid-template-columns: 1fr 2fr 0.2fr;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  grid-gap: 30px;
+}
+
+/*Education Grid Container*/
+.Codespace-qualification {
+  grid-area: CodespaceQualification;
+}
+.Animation-qualification {
+  grid-area: AnimationQualification;
+}
+.Education-container {
+  display: grid;
+  grid-template-areas: 
+    "CodespaceQualification AnimationQualification";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/*Experience Grid Container*/
+.OLSPS-DataCapturer {
+  grid-area: DataCapturer;
+}
+.ClickFoundation-Facilitator {
+  grid-area: Facilitator;
+}
+.Experience-container {
+  display: grid;
+  grid-template-areas: 
+    "DataCapturer Facilitator";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/* CLASS SECTION */
+.bg {
+  background: url("../image/Background_Pic.jpg");
+  background-position: center;
+  background-size: cover;
+  background-image: blue ;
+}
+
+.nav-link {
+  margin-right: 20px;
+}
+
+.carousel-item {
+  height: auto;
+  width: 100%;
+}
+
+.carousel-inner {
+  width: auto;
+  height: 500px;
+  display: block;
+  margin: auto;
+}
+
+.d-block {
+  object-fit: fill;
+  width: auto;
+  height: 500px;
+}
+
+.main {
+  display: flex;
+  opacity: 80%;
+}
+
+.Qualifications-Section {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+  border: 5px outset lightslategrey;
+  font-family: sans-serif;
+  position: static;
+}
+
+.Experience-Section {
+  background-color: aliceblue;
+  color:black;
+  padding: 10px;
+  border: 5px outset lightslategrey;
+  margin-top: 5px;
+  font-family: sans-serif;
+  position: static;
+}
+
+.Skills-Section {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;;
+  border: 5px outset lightslategrey;
+  margin-top: 5px;
+  font-family: sans-serif;
+  position: static;
+}
+
+.Interests-Section {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;;
+  border: 5px outset lightslategrey;
+  margin-top: 5px;
+  margin-left: 5px;
+  font-family: sans-serif;
+  position: static;
+}
+
+.Icons {
+  margin: 5px;
+}
+
+.footer {
+  background-color: #0c2e4f;
+  padding: 10px;
+  position: static;
+}
+
+/* LINK */
+a:link {
+  color: rgb(18, 71, 185);
+}
+
+/*Get In Touch Form*/
+.ContactMe {
+  background-color: lavender;
+  width: auto;
+  height: 30rem;
+  opacity: 80%;
+}
+
+.FormHeading {
+  text-align: center;
+  color: black;
+  padding: 1.3rem;
+}
+
+.button {
+  display: table-row;
+  text-align: center;
+}
+
+.name {
+  grid-area: name;
+  text-align: right;
+}
+.email {
+  grid-area: email;
+  text-align: left;
+}
+.subject {
+  grid-area: subject;
+  text-align: center;
+}
+.message {
+  grid-area: message;
+  text-align: center;
+}
+.button {
+  grid-area: button;
+  text-align: center;
+}
+
+input, textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+button {
+  border-radius: 5px;
+  background-color: #0c2e4f;
+  opacity: 1;
+}
+
+.Contact-container {
+  display: grid;
+  grid-template-areas: 
+  "name email"
+  "subject subject"
+  "message message"
+  "button button";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/* Small devices (portrait laptops and large phones, 600px and down)*/
+@media screen and (max-width: 578px) {
+.grid-container {
+  grid-template-columns: auto;
+  grid-template-areas: 
+  "education"
+  "experience"
+  "skills"
+  "interests";
+  }
+  .Education-container {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "CodespaceQualification"
+    "AnimationQualification";
+  }
+  .Experience-container {
+    grid-template-columns: auto;
+    grid-template-areas: 
+      "DataCapturer"
+      "Facilitator";
+  }
+
+  #Name, #Menu, h2, h4 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+  ul li {
+    font-size: 12px;
+  }
+  #Profile {
+    padding: 0%;
+  }
+  #Headshot {
+    height: 100px;
+    width: 100px;
+    border: 5px inset peru;
+  }
+  #HeaderText {
+    text-align: justify;
+    padding-top: 0%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and down)*/
+@media screen and (min-width: 578px) and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-areas: 
+      "education"
+      "experience"
+      "skills"
+      "interests";
+  }
+
+  .Education-container {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "CodespaceQualification"
+    "AnimationQualification";
+  }
+  .Experience-container {
+    grid-template-columns: auto;
+    grid-template-areas: 
+      "DataCapturer"
+      "Facilitator";
+  }
+
+  #Name, #Menu, h2, h4 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  ul li {
+    font-size: 16px;
+  }
+  #Profile {
+    padding: 2%;
+  }
+  #Headshot {
+    height: 100px;
+    width: 100px;
+    border: 7px inset peru;
+  }
+  #HeaderText {
+    text-align: justify;
+    padding-top: 5%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and down)*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      "education education"
+      "experience experience"
+      "skills interests";
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #Name, #Menu, h2, h4 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  ul li {
+    font-size: 18px;
+  }
+  #Profile {
+    padding: 4%;
+  }
+  #Headshot {
+    height: 135px;
+    width: 135px;
+    border: 8.5px inset peru;
+  }
+  #HeaderText {
+    padding-top: 5%;
+  }
+}
+
+/*Animation Code*/
+@keyframes AnimationLogo {
+  0% {transform: translateY(0);}
+  25% {filter: grayscale(100%); transform: translateY(-10px)}
+  50% {filter: grayscale(100%);}
+  100% {transform: translateY(0);}
+}
+
+#AnimationLogo:hover {
+  animation-name: AnimationLogo;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
