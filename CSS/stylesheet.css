@@ -98,6 +98,19 @@ footer {
   text-align: justify;
 }
 
+#user-name {
+  width: 242px;
+}
+#user-email {
+  width: 242px;
+}
+#user-subject {
+  width: 500px;
+}
+#msg {
+  width: 500px;
+}
+
 /*Grid Display CSS*/
 .Qualifications-Section {
   grid-area: education;
@@ -131,7 +144,7 @@ footer {
   display: grid;
   grid-template-areas: 
     "profile DescriptionOfMe _blank";
-  grid-template-columns: 1fr 2fr 0.2fr;
+  grid-template-columns: 1fr 2fr 0.1fr;
   padding-top: 3rem;
   padding-bottom: 3rem;
   grid-gap: 30px;
@@ -206,7 +219,8 @@ footer {
   background-color: aliceblue;
   color: black;
   padding: 10px;
-  border: 5px outset lightslategrey;
+  border-top: 5px outset lightslategrey;
+  border-bottom: 5px outset lightslategrey;
   font-family: sans-serif;
   position: static;
 }
@@ -215,7 +229,8 @@ footer {
   background-color: aliceblue;
   color:black;
   padding: 10px;
-  border: 5px outset lightslategrey;
+  border-top: 5px outset lightslategrey;
+  border-bottom: 5px outset lightslategrey;
   margin-top: 5px;
   font-family: sans-serif;
   position: static;
@@ -224,8 +239,10 @@ footer {
 .Skills-Section {
   background-color: aliceblue;
   color: black;
-  padding: 10px;;
-  border: 5px outset lightslategrey;
+  padding: 10px;
+  border-top: 5px outset lightslategrey;
+  border-bottom: 5px outset lightslategrey;
+  border-right: 5px outset lightslategrey;
   margin-top: 5px;
   font-family: sans-serif;
   position: static;
@@ -235,7 +252,9 @@ footer {
   background-color: aliceblue;
   color: black;
   padding: 10px;;
-  border: 5px outset lightslategrey;
+  border-top: 5px outset lightslategrey;
+  border-bottom: 5px outset lightslategrey;
+  border-left: 5px outset lightslategrey;
   margin-top: 5px;
   margin-left: 5px;
   font-family: sans-serif;
@@ -302,10 +321,11 @@ input, textarea {
   border-radius: 5px;
   margin-bottom: 10px;
 }
-button {
-  border-radius: 5px;
-  background-color: #0c2e4f;
-  opacity: 1;
+#button {
+  border-radius: 10px;
+  background-color: #0f6ac5;
+  opacity: 100% !important;
+  border: 1px solid black;
 }
 
 .Contact-container {
@@ -321,7 +341,7 @@ button {
 
 /* Small devices (portrait laptops and large phones, 600px and down)*/
 @media screen and (max-width: 578px) {
-.grid-container {
+  .grid-container {
   grid-template-columns: auto;
   grid-template-areas: 
   "education"
@@ -341,7 +361,29 @@ button {
       "DataCapturer"
       "Facilitator";
   }
+  
+  .Contact-container {
+    grid-template-areas: 
+    "name" 
+    "email"
+    "subject"
+    "message"
+    "button";
+    grid-template-columns: auto;
+  }
 
+  .Skills-Section {
+    border-right: 0px;
+  }
+
+  .Interests-Section {
+    border-left: 0px;
+    margin-left: 0px;
+  }
+
+  h1 {
+    font: 22px;
+  }
   #Name, #Menu, h2, h4 {
     font-size: 18px;
   }
@@ -366,6 +408,25 @@ button {
     text-align: justify;
     padding-top: 0%;
   }
+
+  #user-name {
+    width: 400px;
+  }
+  .name {
+    text-align: center;
+  }
+  #user-email {
+    width: 400px;
+  }
+  .email {
+    text-align: center;
+  }
+  #user-subject {
+    width: 400px;
+  }
+  #msg {
+    width: 400px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and down)*/
@@ -377,6 +438,16 @@ button {
       "experience"
       "skills"
       "interests";
+  }
+
+  .Contact-container {
+    grid-template-areas: 
+    "name" 
+    "email"
+    "subject"
+    "message"
+    "button";
+    grid-template-columns: auto;
   }
 
   .Education-container {
@@ -392,6 +463,18 @@ button {
       "Facilitator";
   }
 
+  .Skills-Section {
+    border-right: 0px;
+  }
+
+  .Interests-Section {
+    border-left: 0px;
+    margin-left: 0px;
+  }
+
+  h1 {
+    font: 26px;
+  }
   #Name, #Menu, h2, h4 {
     font-size: 22px;
   }
@@ -416,6 +499,24 @@ button {
     text-align: justify;
     padding-top: 5%;
   }
+  #user-name {
+    width: 500px;
+  }
+  .name {
+    text-align: center;
+  }
+  #user-email {
+    width: 500px;
+  }
+  .email {
+    text-align: center;
+  }
+  #user-subject {
+    width: 500px;
+  }
+  #msg {
+    width: 500px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and down)*/
@@ -429,6 +530,9 @@ button {
     grid-template-columns: 1fr 2fr;
   }
 
+  h1 {
+    font: 28px;
+  }
   #Name, #Menu, h2, h4 {
     font-size: 24px;
   }
@@ -466,4 +570,17 @@ button {
   animation-name: AnimationLogo;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
+}
+
+#button:hover {
+  background-color: #0c2e4f;
+  color: antiquewhite;
+  opacity: 50%;
+}
+#button:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+#button {
+  box-shadow: 0 6px #999;
 }
