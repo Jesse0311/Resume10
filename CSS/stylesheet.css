@@ -29,12 +29,6 @@ header {
   padding-bottom: 20px;
 }
 
-footer {
-  background-color: gainsboro;
-  text-align: center;
-  color: aliceblue;
-}
-
 /* ID SECTION */
 #carousel-text {
   color: white;
