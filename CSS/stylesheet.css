@@ -14,6 +14,7 @@ h3 {
   font-size: 125%;
 }
 
+
 header {
   background-color: #0c2e4f;
   color: honeydew;
@@ -189,13 +190,13 @@ footer {
 
 /*Carousel Code*/
 .carousel-item img{
-  height: 200px;
+  height: 250px;
   width: auto;
   margin: auto;
 }
 .carousel-inner {
   width: auto;
-  height: 300px;
+  height: 350px;
   display: flex;
   place-items: center;
 }
@@ -364,6 +365,7 @@ input, textarea {
     grid-template-areas: 
     "Profile"
     "DescriptionOfMe";
+    padding-bottom: 0px;
   }
   .DescriptionOfMe {
     padding-right: 10px;
@@ -476,6 +478,7 @@ input, textarea {
     grid-template-areas: 
     "Profile"
     "DescriptionOfMe";
+    padding-bottom: 0px;
   }
   .DescriptionOfMe {
     padding-right: 15px;
@@ -548,8 +551,8 @@ input, textarea {
     padding: 2%;
   }
   #Headshot {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border: 7px inset peru;
   }
   #HeaderImage {
