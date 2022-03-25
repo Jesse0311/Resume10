@@ -1,7 +1,7 @@
 
 /* ELEMENTS SECTION */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 120%;
   color: aliceblue;
 }
@@ -24,6 +24,9 @@ header {
   width: 80px;
   border: 1px inset peru;
 }
+#HeaderImage {
+  padding-bottom: 20px;
+}
 
 footer {
   background-color: gainsboro;
@@ -34,6 +37,11 @@ footer {
 /* ID SECTION */
 #carousel-text {
   color: white;
+}
+
+#BodyPic {
+  width: 100%;
+  height: 100%;
 }
 
 #education {
@@ -65,10 +73,10 @@ footer {
 #Headshot {
   width: 170px;
   height: 170px;
-  padding: 8px;
+  padding: 2px;
   border: 10px inset peru;
   border-radius: 50%;
-  margin: 10px;
+  margin: 5px;
   object-fit: cover;
 }
 
@@ -80,10 +88,9 @@ footer {
 
 #Profile {
   font-size: 105%;
-  text-align: left;
-  padding-left: 80px;
   width: auto;
   color: pink;
+  padding-left: 100px;
 }
 
 #Name {
@@ -96,19 +103,6 @@ footer {
   text-align: left;
   width: 100%;
   text-align: justify;
-}
-
-#user-name {
-  width: 242px;
-}
-#user-email {
-  width: 242px;
-}
-#user-subject {
-  width: 500px;
-}
-#msg {
-  width: 500px;
 }
 
 /*Grid Display CSS*/
@@ -133,18 +127,20 @@ footer {
   grid-template-columns: 1fr 3fr;
 }
 
-/*Profile grid container*/
+/*Profile Grid Container*/
 .Profile {
   grid-area: profile;
 }
+
 .DescriptionOfMe {
   grid-area: DescriptionOfMe;
+  padding-right: 100px;
 }
 .Profile-grid {
   display: grid;
   grid-template-areas: 
-    "profile DescriptionOfMe _blank";
-  grid-template-columns: 1fr 2fr 0.1fr;
+    "profile DescriptionOfMe";
+  grid-template-columns: 1fr 2fr;
   padding-top: 3rem;
   padding-bottom: 3rem;
   grid-gap: 30px;
@@ -182,45 +178,40 @@ footer {
 
 /* CLASS SECTION */
 .bg {
-  background: url("../image/Background_Pic.jpg");
+  background: url("../images/Background_Pic.jpg");
   background-position: center;
   background-size: cover;
-  background-image: blue ;
 }
 
 .nav-link {
   margin-right: 20px;
 }
 
-.carousel-item {
-  height: auto;
-  width: 100%;
-}
-
-.carousel-inner {
+/*Carousel Code*/
+.carousel-item img{
+  height: 200px;
   width: auto;
-  height: 500px;
-  display: block;
   margin: auto;
 }
-
-.d-block {
-  object-fit: fill;
+.carousel-inner {
   width: auto;
-  height: 500px;
+  height: 300px;
+  display: flex;
+  place-items: center;
 }
 
 .main {
   display: flex;
   opacity: 80%;
+  padding-bottom: 5px;
 }
 
 .Qualifications-Section {
   background-color: aliceblue;
   color: black;
   padding: 10px;
-  border-top: 5px outset lightslategrey;
-  border-bottom: 5px outset lightslategrey;
+  border-top: 2px outset lightslategrey;
+  border-bottom: 2px outset lightslategrey;
   font-family: sans-serif;
   position: static;
 }
@@ -229,9 +220,8 @@ footer {
   background-color: aliceblue;
   color:black;
   padding: 10px;
-  border-top: 5px outset lightslategrey;
-  border-bottom: 5px outset lightslategrey;
-  margin-top: 5px;
+  border-top: 2px outset lightslategrey;
+  border-bottom: 2px outset lightslategrey;
   font-family: sans-serif;
   position: static;
 }
@@ -240,10 +230,9 @@ footer {
   background-color: aliceblue;
   color: black;
   padding: 10px;
-  border-top: 5px outset lightslategrey;
-  border-bottom: 5px outset lightslategrey;
-  border-right: 5px outset lightslategrey;
-  margin-top: 5px;
+  border-top: 2px outset lightslategrey;
+  border-bottom: 2px outset lightslategrey;
+  border-right: 2px outset lightslategrey;
   font-family: sans-serif;
   position: static;
 }
@@ -251,12 +240,10 @@ footer {
 .Interests-Section {
   background-color: aliceblue;
   color: black;
-  padding: 10px;;
-  border-top: 5px outset lightslategrey;
-  border-bottom: 5px outset lightslategrey;
-  border-left: 5px outset lightslategrey;
-  margin-top: 5px;
-  margin-left: 5px;
+  padding: 10px;
+  border-top: 2px outset lightslategrey;
+  border-bottom: 2px outset lightslategrey;
+  border-left: 2px outset lightslategrey;
   font-family: sans-serif;
   position: static;
 }
@@ -271,9 +258,18 @@ footer {
   position: static;
 }
 
-/* LINK */
-a:link {
-  color: rgb(18, 71, 185);
+/*Form labels*/
+#name {
+  width: 242px;
+}
+#email {
+  width: 242px;
+}
+#subject {
+  width: 500px;
+}
+#msg {
+  width: 500px;
 }
 
 /*Get In Touch Form*/
@@ -283,18 +279,16 @@ a:link {
   height: 30rem;
   opacity: 80%;
 }
-
 .FormHeading {
   text-align: center;
   color: black;
   padding: 1.3rem;
 }
-
-.button {
+.col-12 {
   display: table-row;
+  grid-area: button;
   text-align: center;
 }
-
 .name {
   grid-area: name;
   text-align: right;
@@ -311,23 +305,17 @@ a:link {
   grid-area: message;
   text-align: center;
 }
-.button {
-  grid-area: button;
-  text-align: center;
-}
-
 input, textarea {
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 10px;
 }
-#button {
+.button {
   border-radius: 10px;
   background-color: #0f6ac5;
   opacity: 100% !important;
   border: 1px solid black;
 }
-
 .Contact-container {
   display: grid;
   grid-template-areas: 
@@ -339,15 +327,62 @@ input, textarea {
   grid-gap: 10px;
 }
 
-/* Small devices (portrait laptops and large phones, 600px and down)*/
+/*Icons in Footer*/
+#InstagramIcon {
+  width: 54px;
+  height: 54px;
+}
+#LinkedInIcon {
+  width: 48px;
+  height: 48px;
+}
+#GmailIcon {
+  width: 43px;
+  height: 45px;
+}
+
+/*Extra small devices (Galaxy Fold, 300px and down)*/
+@media screen and (max-width: 300px) {
+  #name {
+    width: 150px;
+  }
+  #email {
+    width: 150px;
+  }
+  #subject {
+    width: 150px;
+  }
+  #msg {
+    width: 150px;
+  }
+}
+
+/* Small devices (portrait laptops and large phones, 578px and down)*/
 @media screen and (max-width: 578px) {
+  .Profile-grid {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "Profile"
+    "DescriptionOfMe";
+  }
+  .DescriptionOfMe {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  #Name {
+    text-align: center;
+  }
+  #FacilitatorHeading {
+    text-align: center;
+  }
+  
   .grid-container {
-  grid-template-columns: auto;
-  grid-template-areas: 
-  "education"
-  "experience"
-  "skills"
-  "interests";
+    grid-template-columns: auto;
+   grid-template-areas: 
+   "education"
+   "experience"
+   "skills"
+   "interests";
   }
   .Education-container {
     grid-template-columns: auto;
@@ -358,8 +393,8 @@ input, textarea {
   .Experience-container {
     grid-template-columns: auto;
     grid-template-areas: 
-      "DataCapturer"
-      "Facilitator";
+    "DataCapturer"
+    "Facilitator";
   }
   
   .Contact-container {
@@ -404,33 +439,55 @@ input, textarea {
     width: 100px;
     border: 5px inset peru;
   }
+  #HeaderImage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
   #HeaderText {
     text-align: justify;
     padding-top: 0%;
   }
 
-  #user-name {
-    width: 400px;
+  #name {
+    width: 300px;
   }
   .name {
     text-align: center;
   }
-  #user-email {
-    width: 400px;
+  #email {
+    width: 300px;
   }
   .email {
     text-align: center;
   }
-  #user-subject {
-    width: 400px;
+  #subject {
+    width: 300px;
   }
   #msg {
-    width: 400px;
+    width: 300px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and down)*/
 @media screen and (min-width: 578px) and (max-width: 768px) {
+  .Profile-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "Profile"
+    "DescriptionOfMe";
+  }
+  .DescriptionOfMe {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  #Name {
+    text-align: center;
+  }
+  #FacilitatorHeading {
+    text-align: center;
+  }
+
   .grid-container {
     grid-template-columns: auto;
     grid-template-areas: 
@@ -495,27 +552,32 @@ input, textarea {
     width: 100px;
     border: 7px inset peru;
   }
+  #HeaderImage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
   #HeaderText {
     text-align: justify;
     padding-top: 5%;
   }
-  #user-name {
-    width: 500px;
+  #name {
+    width: 350px;
   }
   .name {
     text-align: center;
   }
-  #user-email {
-    width: 500px;
+  #email {
+    width: 350px;
   }
   .email {
     text-align: center;
   }
-  #user-subject {
-    width: 500px;
+  #subject {
+    width: 350px;
   }
   #msg {
-    width: 500px;
+    width: 350px;
   }
 }
 
@@ -566,21 +628,21 @@ input, textarea {
   100% {transform: translateY(0);}
 }
 
-#AnimationLogo:hover {
+.AnimationLogo:hover {
   animation-name: AnimationLogo;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
 }
 
-#button:hover {
+.button:hover {
   background-color: #0c2e4f;
   color: antiquewhite;
   opacity: 50%;
 }
-#button:active {
+.button:active {
   box-shadow: 0 3px #666;
   transform: translateY(4px);
 }
-#button {
+.button {
   box-shadow: 0 6px #999;
 }

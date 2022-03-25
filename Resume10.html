@@ -25,7 +25,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary ">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="justify-content-center navbar-collapse collapse" id="navigation-bar">
@@ -59,29 +59,39 @@
 
     <div class="bg">
         <picture>
-            <source media="(max-width:650px)" srcset="image/Jesse_Head_Pic.jpg">
-            <source media="(max-width:1000px)" srcset="image/Jesse_Shoulders_Pic.jpg">
-            <img src="image/Jesse_Body_Pic.jpg" width="100%" height="100%" alt="Body image">
+            <source media="(max-width:650px)" srcset="images/Jesse_Head_Pic.jpg">
+            <source media="(max-width:1000px)" srcset="images/Jesse_Shoulders_Pic.jpg">
+            <img id="BodyPic" src="images/Jesse_Body_Pic.jpg" alt="Body image">
         </picture>
 
         <header id="header">
-            <div class="Profile-grid">
-                <div id="Profile" class="Profile">
-                    <img id="Headshot" src="image\Jesse_Pic.jpg" alt="This is a pic of Jesse">
-                    <h1 id="Name">Jesse Christians</h1>
-                    <h4>Facilitator</h4>
+            <section class="Profile-grid">
+                <div class="row">
+                    <div id="Profile" class="Profile col">
+                        <div id="HeaderImage">
+                        <img id="Headshot" src="images/Jesse_Pic.jpg" alt="This is a pic of Jesse">
+                        </div>
+                        <h1 id="Name">Jesse Christians</h1>
+                        <h4 id="FacilitatorHeading">Facilitator</h4>
+                    </div>
                 </div>
-                <section id="DescriptionOfMe" class="DescriptionOfMe">
-                    <p id="HeaderText">Facilitator for The Click Foundation with 3+ years experience in various working
-                        environments. Ongoing improvement of coding knowledge, eager to learn and better my abilities,
-                        and
-                        passionate about all things technical. Background knowledge of (MS Office, Google Workspace Apps
-                        and
-                        Basic Computer Logic) how a computer works. I got my first PC in 2010, and since then I've come
-                        to
-                        realise that it is something that apeals to me more than anything else. </p>
-                </section>
-            </div>
+                <div class="row">
+                    <div id="DescriptionOfMe" class="DescriptionOfMe col">
+                        <p id="HeaderText">Facilitator for The Click Foundation with 3+ years experience in various
+                            working
+                            environments. Ongoing improvement of coding knowledge, eager to learn and better my
+                            abilities,
+                            and
+                            passionate about all things technical. Background knowledge of (MS Office, Google Workspace
+                            Apps
+                            and
+                            Basic Computer Logic) how a computer works. I got my first PC in 2010, and since then I've
+                            come
+                            to
+                            realise that it is something that apeals to me more than anything else. </p>
+                    </div>
+                </div>
+            </section>
         </header>
 
         <!--Carousel Code-->
@@ -101,27 +111,28 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="6000">
                     <div class="d-flex justify-content-center">
-                        <img src="image/HTML-Logo.png" class="d-block align-middle" alt="HTML logo">
+                        <img src="images/HTML-Logo.png" class="d-block align-middle" alt="HTML logo">
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="d-flex justify-content-center">
-                        <img src="image/CSS-Logo.png" class="d-block align-middle" alt="CSS logo">
+                        <img src="images/CSS-Logo.png" class="d-block align-middle" alt="CSS logo">
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="d-flex justify-content-center">
-                        <img src="image/Bootstrap-Logo.png" class="d-block align-middle" alt="Bootstrap logo">
+                        <img src="images/Bootstrap-Logo.png" class="d-block align-middle" alt="Bootstrap logo">
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="d-flex justify-content-center">
-                        <img src="image/Storyboard-Logo.png" class="d-block align-middle" alt="Toonboom Storyboard logo">
+                        <img src="images/Storyboard-Logo.png" class="d-block align-middle"
+                            alt="Toonboom Storyboard logo">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex justify-content-center">
-                        <img src="image/Harmony-Logo.png" class="d-block align-middle" alt="Toonboom Harmony logo">
+                        <img src="images/Harmony-Logo.png" class="d-block align-middle" alt="Toonboom Harmony logo">
                     </div>
                 </div>
             </div>
@@ -283,25 +294,24 @@
                 <div class="Contact-container">
                     <div class="contact-form name">
                         <label for="name"></label>
-                        <input type="text" id="user-name" name="user_name" placeholder="Full Name" minlength="2"
-                            required>
+                        <input type="text" id="name" name="user_name" placeholder="Full Name" minlength="2" required>
                     </div>
                     <div class="contact-form email">
                         <label for="email"></label>
-                        <input type="email" id="user-email" name="user_email" placeholder="Enter email address"
-                            required>
+                        <input type="email" id="email" name="user_email" placeholder="Enter email address" required>
                     </div>
                     <div class="contact-from subject">
                         <label for="subject"></label>
-                        <input type="text" id="user-subject" name="user_subject" placeholder="Subject" maxlength="50" required>
+                        <input type="text" id="subject" name="user_subject" placeholder="Subject" maxlength="50"
+                            required>
                     </div>
                     <div class="contact-form message">
-                        <label for="message"></label>
+                        <label for="msg"></label>
                         <textarea id="msg" name="user_message" rows="5" cols="33" placeholder="Type your message here"
                             required></textarea>
                     </div>
-                    <div class="button">
-                        <button type="submit" class="button" id="button">Send Message</button>
+                    <div class="col-12">
+                        <button type="submit" class="button">Send Message</button>
                     </div>
                 </div>
             </form>
@@ -309,12 +319,12 @@
 
         <footer id="contact" class="footer">
             <h2>Get In Touch</h2>
-            <a href="http://www.instagram.com/jah_blxss" target="_blank" class="Icons"><img id="AnimationLogo"
-                    src="image/Instagram_Pic.png" alt="Instagram" width="54px" height="54px"></a>
+            <a href="http://www.instagram.com/jah_blxss" target="_blank" class="Icons"><img id="InstagramIcon"
+                    class="AnimationLogo" src="images/Instagram_Pic.png" alt="Instagram"></a>
             <a href="https://www.linkedin.com/in/jesse-christians-631671227/" target="_blank" class="Icons"><img
-                    id="AnimationLogo" src="image/LinkedIn_Pic.png" alt="LinkedIn" width="48px" height="48px"></a>
-            <a href="mailto:j.christians@lab.clicklearning.org" class="Icons"><img id="AnimationLogo"
-                    src="image/Gmail_Pic.png" alt="Gmail" width="43px" height="45px"></a>
+                    id="LinkedInIcon" class="AnimationLogo" src="images/LinkedIn_Pic.png" alt="LinkedIn"></a>
+            <a href="mailto:j.christians@lab.clicklearning.org" class="Icons"><img id="GmailIcon" class="AnimationLogo"
+                    src="images/Gmail_Pic.png" alt="Gmail"></a>
         </footer>
     </div>
 </body>
